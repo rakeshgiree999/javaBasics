@@ -1,0 +1,30 @@
+//finding position of element in 2D array
+
+class binarySearch2D{
+
+    public static String findPosition(int num, int arr[][]){
+        int startRow =arr.length-1;
+        int endRow = 0;
+        int startCol = 0;
+        int endCol = arr[0].length-1;
+        while(arr[startRow][startCol]!=num){
+            if(arr[startRow][startCol]<num){
+                startCol++;
+            }
+            else if(arr[startRow][startCol]>num){
+                startRow--;
+            }
+            else{
+                System.out.println("(" + startRow + ", " + startCol + ")");
+            }
+        }
+        return Integer.toString(startRow) + ", " + Integer.toString(startCol);
+    } 
+
+
+    public static void main(String args[]){
+        int arr[][]= {{10,20,30,40},{15,25,35,45},{27,29,37,48},{32,33,39,50}};
+        int toFind = 10;
+        System.out.println(findPosition(toFind, arr));
+    }
+}
