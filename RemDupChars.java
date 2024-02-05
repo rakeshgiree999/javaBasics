@@ -3,12 +3,6 @@
 
 import java.util.*;
 class RemDupChars {
-    public static int tilesInFloor(int n) {
-        if(n>=1 && n<=3) return 1;
-        if(n==4) return 2;
-        return tilesInFloor(n-1)+ tilesInFloor(n-4);
-    }
-
     public static StringBuilder removeDups(String str, StringBuilder st, boolean[] map, int count){
         if(count==str.length()-1){
             return st;
@@ -23,7 +17,6 @@ class RemDupChars {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-        System.out.println(tilesInFloor(4));
         System.out.println(removeDups(str, new StringBuilder(), new boolean[26], 0));
         sc.close();
     }
