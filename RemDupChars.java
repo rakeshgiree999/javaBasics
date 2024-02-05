@@ -24,9 +24,7 @@ class RemDupChars {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         System.out.println(tilesInFloor(4));
-        boolean map[] = new boolean[26];
-        StringBuilder st = new StringBuilder();
-        System.out.println(removeDups(str,st, map, 0));
+        System.out.println(removeDups(str, new StringBuilder(), new boolean[26], 0));
         sc.close();
     }
 }
